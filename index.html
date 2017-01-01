@@ -1,1 +1,41 @@
-Hello World
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        function getRequests() {
+            var s1 = location.search.substring(1, location.search.length).split('&'),
+                r = {},
+                s2, i;
+            for (i = 0; i < s1.length; i += 1) {
+                s2 = s1[i].split('=');
+                r[decodeURIComponent(s2[0]).toLowerCase()] = decodeURIComponent(s2[1]);
+            }
+            return r;
+        };
+
+
+        var QueryString = getRequests();
+        //alert("func= " + QueryString["func"]);
+
+		
+        if (QueryString["func"] == "ios-sharefacebook") {
+            window.location.assign("https://www.facebook.com");
+			
+        } else if (QueryString["func"] == "ios-rateus") {
+            window.location.assign("https://itunes.apple.com/app/id878589687?mt=12");
+			
+        } else {
+			//more
+			//alert("more");
+            window.location.assign("https://itunes.apple.com/app/id878589687?mt=12");
+        }
+    </script>
+	
+	<p>welcome</p>
+	
+</body>
+</html>
