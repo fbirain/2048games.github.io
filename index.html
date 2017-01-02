@@ -22,7 +22,7 @@
         //alert("func= " + QueryString["func"]);
 
 		
-        if (QueryString["func"] == "ios-sharefacebook") {
+        /*if (QueryString["func"] == "ios-sharefacebook") {
             window.location.assign("https://www.facebook.com");
 			
         } else if (QueryString["func"] == "ios-rateus") {
@@ -32,7 +32,48 @@
 			//more
 			//alert("more");
             window.location.assign("https://goo.gl/eCm16c");//"https://itunes.apple.com/app/id878589687?mt=12");
-        }
+        }*/
+		
+		switch(QueryString["func"]) {
+		//--------------------------------------------------- ios ------------------------------------
+		case "ios-moregames":
+			window.location.assign("https://www.moregame.test");
+			break;
+			
+		case "ios-moreapps":
+			window.location.assign("https://itunes.apple.com/artist/id495882211?mt=12");
+			break;
+			
+		
+		case "ios-sharefacebook":
+			window.location.assign("https://www.facebook.com/sharer/sharer.php?u=https%3A//itunes.apple.com/app/id885319274?mt=8");
+			break;
+			
+		case "ios-sharetwitter":
+			window.location.assign("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2F2048game.com%2F&ref_src=twsrc%5Etfw&text=Check%20out%20one%20of%20the%20most%20addictive%20games%20of%20all%20time%20-%20Super%202048%20Free!&tw_p=tweetbutton&url=https%3A%2F%2Fitunes.apple.com/%2Fapp%2Fid885319274?mt=8");
+			break;
+		
+		case "ios-sharegoogleplus":
+			window.location.assign("https://www.sharegoogleplus.test");
+			break;
+		
+		case "ios-rateus":
+			window.location.assign("https://itunes.apple.com/app/id885319274?mt=8");
+			break;
+		
+		
+		case "ios-tipsandtricks":
+			window.location.assign("https://tipsandtricks.test");
+			break;
+			
+		case "ios-feedback":
+			window.location.assign("https://www.facebook.com/1694660557463641/");
+			break;
+		
+		default:
+			window.location.assign("https://goo.gl/eCm16c");//"https://itunes.apple.com/app/id885319274?mt=8");
+		}
+	
     </script>
 	
 	<p>welcome</p>
