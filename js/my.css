@@ -1,0 +1,50 @@
+h1.title{
+	font-size: 50px;
+}
+
+h1:hover{
+	color:rgb(114, 255, 102);
+}
+
+.command {
+	text-align:right;
+}
+
+.button{
+	display: inline-table;
+	padding-left: 10px;
+	
+	  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  background: #008B8B;
+  border-radius: 3px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f6f2;
+  height: 40px;
+  margin-bottom:5px;/*vDev*/
+  line-height: 42px; }
+  .pp-donate button img {
+    vertical-align: -4px;
+    margin-right: 8px; }
+}
+
+.button  a:link  { 
+	text-decoration: none;
+	border: 2px;
+}
+
+.button  a:hover{
+	color:rgb(102, 204, 255);
+	text-decoration : none;
+}
+
+.shortcut span:hover{
+	color:rgb(255, 79, 213);
+}
