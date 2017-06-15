@@ -2,7 +2,7 @@
 var HTML5API = {
 
     protocol:function(){
-    return document.location.protocol == "file:" ? 'file://' : "http://2048games.github.io";
+    return document.location.protocol == "file:" ? 'file://' : "https://2048games.github.io";
     },
 
     storePreference: function (key, value) {
@@ -183,7 +183,7 @@ var HTML5API = {
 
     validEvents: ["adComplete","adStart","midrollPending"],
     receiveHostEvents: function(e){
-        if(!(/(http:\/\/(localhost|m.kizi.com))|file:\/\//).test(e.origin)){
+        if(!(/(https:\/\/(localhost|2048games.github.io))|file:\/\//).test(e.origin)){
             console.log("Api: origin declined: " + e.origin);
             return;
         }
