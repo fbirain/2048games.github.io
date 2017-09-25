@@ -1,10 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
 </head>
 
 <body>
+
+	<h1 id="myAdTest">My ad 1</h1>
+
     <script>
         function getRequests() {
             var s1 = location.search.substring(1, location.search.length).split('&'),
@@ -17,76 +20,15 @@
             return r;
         };
 
-
         var QueryString = getRequests();
         //alert("func= " + QueryString["func"]);
 
-		
-        /*if (QueryString["func"] == "ios-sharefacebook") {
-            window.location.assign("https://www.facebook.com");
-			
-        } else if (QueryString["func"] == "ios-rateus") {
-            window.location.assign("https://itunes.apple.com/app/id878589687?mt=12");
-			
-        } else {
-			//more
-			//alert("more");
-            window.location.assign("https://goo.gl/eCm16c");//"https://itunes.apple.com/app/id878589687?mt=12");
-        }*/
-		
-		switch(QueryString["func"]) {
-		//--------------------------------------------------- ios ------------------------------------
-		case "ios-moregames":
-			window.location.assign("https://itunes.apple.com/app/id885319274?mt=8");
-			break;
-			
-		case "ios-moreapps":
-			window.location.assign("https://itunes.apple.com/us/developer/id495882211");
-			break;
-			
-		
-		case "ios-sharefacebook":
-			window.location.assign("https://www.facebook.com/sharer/sharer.php?u=https%3A//itunes.apple.com/app/id885319274?mt=8");
-			break;
-			
-		case "ios-sharetwitter":
-			window.location.assign("https://twitter.com/intent/tweet?original_referer=http%3A%2F%2F2048game.com%2F&ref_src=twsrc%5Etfw&text=Check%20out%20one%20of%20the%20most%20addictive%20games%20of%20all%20time%20-%20Super%202048%20Free!&tw_p=tweetbutton&url=https%3A%2F%2Fitunes.apple.com/%2Fapp%2Fid885319274?mt=8");
-			break;
-		
-		case "ios-sharegoogleplus":
-			window.location.assign("https://www.sharegoogleplus.test");
-			break;
-		
-		case "ios-rateus":
-			window.location.assign("https://itunes.apple.com/app/id885319274?mt=8");
-			break;
-		
-		
-		case "ios-tipsandtricks":
-			window.location.assign("tipsandtricks.html");
-			break;
-			
-		case "ios-feedback":
-			window.location.assign("https://www.facebook.com/1694660557463641/");
-			break;
-		
-		
-		
-		case "howtoplay":
-			window.location.assign("https://www.facebook.com/1694660557463641/");
-			break;
-			
-		case "marketing":
-			window.location.assign("https://www.facebook.com/1694660557463641/");
-			break;
-		
-		default:
-			window.location.assign("https://goo.gl/eCm16c");//"https://itunes.apple.com/app/id885319274?mt=8");
-		}
+        if (QueryString["admob"] == "blocked") {
+            var element = document.getElementById("myAdTest");
+            element.innerHTML = "my ad 2";
+        }
 	
     </script>
-	
-	<p>Thanks you to play Super 2048 Free game</p>
-	
+		
 </body>
 </html>
