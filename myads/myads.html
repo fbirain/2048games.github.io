@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        function getRequests() {
+            var s1 = location.search.substring(1, location.search.length).split('&'),
+                r = {},
+                s2, i;
+            for (i = 0; i < s1.length; i += 1) {
+                s2 = s1[i].split('=');
+                r[decodeURIComponent(s2[0]).toLowerCase()] = decodeURIComponent(s2[1]);
+            }
+            return r;
+        };
+
+        var QueryString = getRequests();
+        //alert("func= " + QueryString["func"]);
+
+        if (QueryString["func"] == "countryblocked") {
+            var element = document.getElementById("myAdTest");
+            element.innerHTML = "my ad 2";
+        }
+	
+    </script>
+	
+	<h1 id="myAdTest">My ad 1</h1>
+	
+</body>
+</html>
