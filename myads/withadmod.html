@@ -6,9 +6,7 @@
 
 <body>
 
-	<p id="myAdTest">with Admob</p>
-	<p id="w"></p>
-	<p id="h"></p>
+	<p id="show"></p>
 
     <script>
         function getRequests() {
@@ -25,14 +23,17 @@
         var QueryString = getRequests();
         //alert("func= " + QueryString["func"]);
 
+	    var result = "wA: ";
 		if (QueryString["w"] != null) {
-            var element = document.getElementById("w");
-            element.innerHTML = QueryString["w"];
+             result = result + "w =" + QueryString["w"];
         }
 		if (QueryString["h"] != null) {
             var element = document.getElementById("h");
-            element.innerHTML = QueryString["h"];
+            result = result + ", h =" + QueryString["h"];
         }
+	    
+	var element = document.getElementById("show");
+            element.innerHTML = result;
 	
     </script>
 		
