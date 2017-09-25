@@ -6,7 +6,6 @@
 
 <body>
 
-	<p id="myAdTest">blocked Amob</p>
 	<p id="w"></p>
 	<p id="h"></p>
 
@@ -25,14 +24,17 @@
         var QueryString = getRequests();
         //alert("func= " + QueryString["func"]);
 
+	    var result = "bA: ";
 		if (QueryString["w"] != null) {
-            var element = document.getElementById("w");
-            element.innerHTML = QueryString["w"];
+             result = result + "w =" + QueryString["w"];
         }
 		if (QueryString["h"] != null) {
             var element = document.getElementById("h");
-            element.innerHTML = QueryString["h"];
+            result = result + ", h =" + QueryString["h"];
         }
+	    
+	var element = document.getElementById("w");
+            element.innerHTML = result;
 	
     </script>
 		
