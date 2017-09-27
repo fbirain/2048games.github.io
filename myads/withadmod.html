@@ -30,6 +30,9 @@
 		if (QueryString["h"] != null) {
             result = result + ", h =" + QueryString["h"];
         }
+	    if (QueryString["countrycode"] != null) {
+            result = result + ", c =" + QueryString["countrycode"];
+        }
 	    
 	var element = document.getElementById("show");
             element.innerHTML = result;
