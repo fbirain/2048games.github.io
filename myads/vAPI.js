@@ -1,3 +1,3 @@
 function vAPI_isMyAds() {
-  return false;
+  return true;
 }
